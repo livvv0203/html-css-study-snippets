@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <style>
+        .literate {
+            font-size: 20px;
+            padding-right: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="literate">Data in Local Storage are : </div>
+    <button class="btn">Delete from Local</button>
+    <span class="count">Total Numbers in Local Storage is: </span>
+    <hr />
+    <script>
+      if (!window.localStorage) {
+        alert("Current page does not support local storage.");
+      } else {
+        // SET DATA
+        localStorage.setItem("a", "1");
+        localStorage.lastName = "Liu";
+        localStorage["age"] = "3";
+        localStorage.setItem("firstName", "Olivia")
+        // GET DATA
+        document.write(localStorage.getItem("a"));
+        document.write(localStorage.b);
+        document.write(localStorage["c"]);
+        document.write(localStorage.getItem("firstName"));
+        // Log Data in console
+        console.log(localStorage.getItem("b"));
+        console.log(localStorage);
+      }
+
+      for (var i = 0; i < localStorage.length; i++) {
+        document.querySelector('.literate').append(localStorage.getItem(localStorage.key(i)));
+      }
+
+      window.onload = function() {
+        var btn = document.querySelector('.btn');
+        // Delete from local storage
+        btn.onclick = function() {
+            localStorage.removeItem("a");
+            document.querySelector('.count').append(localStorage.length);
+            // console.log('Local Storage Length: ' + localStorage.length);
+        }
+      }
+
+    </script>
+  </body>
+</html>

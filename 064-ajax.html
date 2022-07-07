@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inner-box {
+            flex: 1;
+            background-color: palevioletred;
+        }
+
+        ul {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            font-size: 30px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        ul li {
+            background-color: pink;
+            width: 100%;
+            height: 50px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+        ul > li.active {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li class="active" id="tab1">1</li>
+            <li id="tab2">2</li>
+        </ul>
+        <div class="inner-box"></div>
+    </div>
+
+    <script>
+
+        // Practice
+        var tabText1 = document.querySelector('#tab1');
+        var tabText2 = document.querySelector('#tab2');
+
+        tabText1.onclick = function() {
+            tabText1.style.color = 'red';
+            tabText2.style.color = 'black';
+        }
+
+        tabText2.onclick = function() {
+            tabText1.className = '';
+            tabText1.style.color = 'black';
+            tabText2.style.color = 'red';
+        }
+
+
+
+        /*
+            Ajax Notes
+        */
+        // STEP 1: Create an ajax object
+        var xhr = new XMLHttpRequest();
+
+        // STEP 2: Request Information Details = GET/POST? URL? ASYNC:true/false?
+        xhr.open('METHOD?', 'URL?', 'ASYNC?');
+
+        // STEP 3: Response after Request
+        xhr.onload = function () {
+            console.log('Successful retrieved data!');
+            console.log(xhr.responseText);
+        }
+
+        // STEP 4: Send the Request
+        xhr.send();
+
+        // Get data in JSON Format STEP 3: 
+        xhr.onload = function () {
+
+            // Parse Data in JSON format
+            var res = JSON.parse(xhr.responseText);
+            console.log(res);
+
+            // console.log(xhr.responseText);
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

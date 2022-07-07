@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-3</title>
+    <style>
+        .box>li {
+            border: 1px solid red;
+        }
+
+        .child+li {
+            background: yellow;
+        }
+
+        .child~li {
+            background: green;
+        }
+        /*
+        div[class~=box1] -----> contains 
+        class^=b 以b开头, class$b 以b结尾, class*b 包含b
+        */
+        div[class=box1] {
+            color: aqua;
+        }
+
+        li:nth-child(2) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <div class="box1">Div</div>
+        <li>11111
+            <ul>
+                <li>11111</li>
+                <li>11111</li>
+                <li>11111</li>
+                <li>11111</li>
+                <li>11111</li>
+            </ul>
+        </li>
+        <li>11111</li>
+        <li class="child">222222</li>
+        <li>11111</li>
+        <li>11111</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banner Image | Practice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      ol,
+      li {
+        list-style: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .banner {
+        width: 100%;
+        height: 500px;
+        position: relative;
+        margin: 50px 0;
+      }
+
+      .banner > ul > li {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        transition: opacity 0.5s linear;
+
+        opacity: 0;
+      }
+
+      .banner > ul > li.active {
+        opacity: 1;
+      }
+
+      .banner > ol {
+        width: 200px;
+        height: 30px;
+        position: absolute;
+        left: 550px;
+        bottom: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px;
+      }
+
+      .banner > ol > li {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .banner > ol > li.active {
+        background-color: grey;
+      }
+
+      .banner > div {
+        width: 40px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .banner > div.left {
+        left: 0;
+      }
+
+      .banner > div.right {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <ul class="imgBox">
+        <li class="active">
+          <img src="./Images/banner_test.jpeg" alt="No Show" />
+        </li>
+        <li><img src="./Images/square_image.png" alt="No Show" /></li>
+        <li><img src="./Images/001.webp" alt="No Show" /></li>
+        <li><img src="./Images/002.webp" alt="No Show" /></li>
+      </ul>
+      <!--Dots Under Image-->
+      <ol>
+        <li data-i="0" data-name="dot" class="active"></li>
+        <li data-i="1" data-name="dot"></li>
+        <li data-i="2" data-name="dot"></li>
+        <li data-i="3" data-name="dot"></li>
+      </ol>
+      <!--Switch Button-->
+      <div class="left">&lt;</div>
+      <div class="right">&gt;</div>
+    </div>
+
+    <script>
+      // Get elements of all li for images and li for dots
+      var imgs = document.querySelectorAll("ul > li");
+      var dots = document.querySelectorAll("ol > li");
+
+      var banner = document.querySelector(".banner");
+
+      // image index, indicated which one to display
+      var index = 0;
+
+      // Function on change one image
+      // true - next, false - prev, num - index
+      function changeOne(type) {
+        // Make the current image disappear
+        imgs[index].className = "";
+        dots[index].className = "";
+
+        if (type === true) {
+          index++;
+        } else if (type === false) {
+          index--;
+        } else {
+          index = type;
+        }
+
+        // Handle Edge case
+        if (index >= imgs.length) {
+          index = 0;
+        }
+
+        if (index < 0) {
+          index = img.length - 1;
+        }
+
+        // Display the next image after click
+        imgs[index].className = "active";
+        dots[index].className = "active";
+      }
+
+      // Gives banner an event
+      banner.onclick = function (e) {
+        if (e.target.className === "left") {
+          changeOne(false);
+          console.log("Left button clicked!");
+        }
+
+        if (e.target.className === "right") {
+          changeOne(true);
+          console.log("Right button clicked!");
+        }
+
+        if (e.target.dataset.name === "dot") {
+          var i = e.target.dataset.i - 0;
+          changeOne(i);
+
+          console.log("Dot box is clicked!");
+        }
+      };
+
+      // Automaticly Switching
+      setInterval(function () {
+        changeOne(true);
+      }, 2000);
+    </script>
+  </body>
+</html>

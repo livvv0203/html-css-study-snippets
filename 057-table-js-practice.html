@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <table border="1" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>GENDER</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <script>
+        var users = [
+            { id: 1, name: 'Jieqing', age: 20 },
+            { id: 2, name: 'Jennifer', age: 30 },
+            { id: 3, name: 'Josh', age: 25}
+        ]
+
+        // Get tbody element
+        var tbody = document.querySelector('tbody');
+
+        // Traver the user data
+        users.forEach( function(item) {
+            
+            console.log(item);
+
+            // Create tr tag for each item
+            var tr = document.createElement('tr');
+
+            for (var key in item) {
+                
+                var td = document.createElement('td');
+                td.innerHTML = item[key];
+
+                // add td to tr
+                tr.appendChild(td);
+                
+                // add tr to tbody
+                tbody.appendChild(tr);
+            }
+
+        });
+    </script>
+
+</body>
+</html> 

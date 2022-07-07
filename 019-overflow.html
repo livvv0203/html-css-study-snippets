@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <style>
+        .box1 {
+            background: yellow;
+            width: 200px;
+            height: 100px;
+            /* overflow: scroll; */
+            /* overflow: hidden; */
+            /* overflow: visible; */
+            overflow: auto;
+            /* overflow: inherit; */
+            /* overflow-x: auto; */
+        }
+        
+        .box2 {
+            background: yellow;
+            width: 200px;
+            height: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* white-space: pre; */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+      dolores numquam vero nobis dolorem distinctio fugiat excepturi nam. Beatae
+      quia veritatis quas, facere nemo incidunt possimus sint accusantium
+      exercitationem vero?
+    </div>
+    <br>
+    <br>
+    <div class="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        dolores numquam vero nobis dolorem distinctio fugiat excepturi nam. Beatae
+        quia veritatis quas, facere nemo incidunt possimus sint accusantium
+        exercitationem vero?
+      </div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        background: whitesmoke;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button id="on" class="btn">OPEN</button>
+      <button id="off" class="btn">CLOSE</button>
+    </div>
+
+    <script>
+        // 1 - id
+        var element = document.getElementById('on');
+        console.log(element);
+
+        // 2 - class
+        var element_1 = document.getElementsByClassName('btn');
+        console.log(element_1);
+
+        // 3 - tag
+        var element_2 = document.getElementsByTagName('button');
+        console.log(element_2);
+
+        // 4 - selector - only the first one
+        var element_3 = document.querySelector('.box');
+        var element_3 = document.querySelector('#on');
+        var element_3 = document.querySelector('div');
+        console.log(element_3);
+        // 5 - query selector ALL
+        var element_3 = document.querySelectorAll('#btn');
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

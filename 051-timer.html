@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        background: whitesmoke;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button id="on">OPEN</button>
+      <button id="off">CLOSE</button>
+    </div>
+
+    <script>
+        // trigger event in function every 1000 mileseconds
+        // setInterval(function() {
+        //     console.log('Triggered + 1'); 
+        // }, 1000);
+
+
+        // Trigger and execute after 1000 mileseconds
+        setTimeout(function() {
+            console.log('Triggered +1');
+        }, 1000);
+
+        // clearInterval() and clearTimeout()
+
+    </script>
+  </body>
+</html>

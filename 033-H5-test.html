@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H5</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      header,
+      footer {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: orange;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      section {
+        height: calc(100% - 100px);
+      }
+
+      nav,
+      aside {
+        width: 100px;
+        height: 100%;
+        background: #ccc;
+        float: left;
+      }
+
+      main {
+        float: left;
+        width: calc(100% - 200px);
+        background: white;
+        height: 100%;
+      }
+
+      main .article1 {
+        height: 60%;
+        
+      }
+
+      main .article2 {
+        height: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <section>
+      <nav>
+        <figure>Nav</figure>
+        <ul>
+          <li>111</li>
+          <li>111</li>
+          <li>111</li>
+        </ul>
+      </nav>
+      <main>
+        <article class="article1">
+          <header>article-header</header>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+            ut, at officia optio recusandae sunt consectetur architecto
+            deleniti. Quibusdam provident porro distinctio neque impedit non
+            maiores, ex soluta eum. Eveniet!
+          </p>
+          <footer>article-footer</footer>
+        </article>
+        <article class="article2">
+          <header>article2-header</header>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+            ut, at officia optio recusandae sunt consectetur architecto
+            deleniti. Quibusdam provident porro distinctio neque impedit non
+            maiores, ex soluta eum. Eveniet!
+          </p>
+          <footer>article2-footer</footer>
+        </article>
+      </main>
+      <aside>
+        <figure>Aside</figure>
+      </aside>
+    </section>
+    <footer>Footer</footer>
+  </body>
+</html>

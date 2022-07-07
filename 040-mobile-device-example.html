@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./icofont/icofont.min.css">
+    <title>Mobile Display</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            height: 44px;
+            background: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header div {
+            width: 60px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        header div:nth-child(1) {
+            border-radius: 12px 0 0 12px;
+            background: #63d985;
+            color: white;
+        }
+
+        header div:nth-child(2) {
+            border-radius: 0 12px 12px 0;
+            background: #63d985;
+            color: white;
+        }
+
+        section {
+            flex: 1;
+            /* 溢出滚动 */
+            overflow: auto; 
+        }
+
+        section ul {
+            display: flex;
+            position: sticky;
+            top: 0px;
+            background: lightgreen;
+            opacity: 50%;
+        }
+
+        section ul li {
+            flex:1;
+            text-align: center;
+            line-height: 35px;
+            height: 35px;
+            border-bottom: 1px solid #d9d9d9;
+            /* color: #8c8c8c; */
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        section ul li:hover {
+            border-bottom: 2px solid #08c63e;
+            color: #08c63e;
+        }
+
+        section .list {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+        }
+
+        section .list>div {
+            width: 49%;
+            margin-top: 4px;
+            border: 1px solid gray;
+        }
+
+        section .list>div img {
+                width: 100%;
+        }
+
+        section .list>div p {
+            height: 30px;
+            line-height: 30px;
+            text-indent: 10px;
+            font-size: 12px;
+        }
+
+        footer {
+            height: 44px;
+            background: whitesmoke;
+        }
+
+        footer ul {
+            display: flex;
+            height: 100%;
+        }
+
+        footer li {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        footer li:hover {
+            color: #08c63e;
+        }
+
+        footer li i {
+            height: 21px; 
+            line-height: 21px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        footer li span {
+            height: 17px;
+            line-height: 21px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        footer li:nth-child(3) {
+            position: relative;
+        }
+
+        footer li:nth-child(3) i{
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            top: -8px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 50px;
+            background: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>Explore</div>
+        <div>Following</div>
+    </header>
+
+    <section>
+        <ul>
+            <li>Live</li>
+            <li>Life</li>
+            <li>People</li>
+        </ul>
+
+        <div class="list">
+            <div>
+                <img src="./Images/square_image.png">
+                <p>Image 1</p>
+            </div>
+            <div>
+                <div>
+                    <img src="./Images/square_image.png">
+                    <p>Image 1</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./Images/square_image.png">
+                    <p>Image 1</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./Images/square_image.png">
+                    <p>Image 1</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./Images/square_image.png">
+                    <p>Image 1</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="./Images/square_image.png">
+                    <p>Image 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li>
+                <i class="icofont-home"></i>
+                <span>HOME</span>
+            </li>
+            <li>
+                <i class="icofont-like"></i>
+                <span>LIKE</span>
+            </li>
+            <li>
+                <i class="icofont-camera"></i>
+            </li>
+            <li>
+                <i class="icofont-heart"></i>
+                <span>HEART</span>
+            </li>
+            <li>
+                <i class="icofont-exit"></i>
+                <span>EXIT</span>
+            </li>
+        </ul>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

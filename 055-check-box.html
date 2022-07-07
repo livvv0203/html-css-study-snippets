@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Box Practice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 100px;
+        padding: 20px;
+        border: 1px solid black;
+        margin: 30px auto;
+        border-radius: 5px;
+      }
+
+      hr {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Select All: <input type="checkbox" /> <br />
+      <hr />
+      <input type="checkbox" />OPTION 1<br />
+      <input type="checkbox" />OPTION 2<br />
+      <input type="checkbox" />OPTION 3<br />
+      <input type="checkbox" />OPTION 4<br />
+    </div>
+
+    <script>
+      var allBtn = document.querySelector("input");
+      var items = document.querySelectorAll("input:nth-child(n+2)");
+      // console.log(allBtn);
+      // console.log(items);
+      // items[0].checked = true;
+
+      allBtn.onclick = function () {
+        var type = allBtn.checked; // true/false
+        // console.log(type);
+        for (var i = 0; i < items.length; i++) {
+          items[i].checked = type;
+        }
+      };
+
+      // Literal all option input, give each one an onclick event
+      for (var i = 0; i < items.length; i++) {
+        items[i].onclick = function () {
+          // Assume all option checkbox are checked
+          var flag = true;
+
+          for (var j = 0; j < items.length; j++) {
+            if (items[j].checked === false) {
+              flag = false;
+              break;
+            }
+          }
+          allBtn.checked = flag;
+        };
+      }
+    </script>
+  </body>
+</html>

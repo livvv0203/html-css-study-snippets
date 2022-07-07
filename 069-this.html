@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This</title>
+    <script>
+      window.onload = function () {
+        var btn = document.querySelector(".btn");
+
+        btn.onclick = function () {
+          alert(this);
+        };
+      };
+
+      function show(x, y) {
+          alert(this); // Refers to the object window
+          alert(x + ", " + y);
+      }
+
+      show(10, 20);
+      // Force to change this to refer to "call"
+      show.call("call", 10, 20);
+
+      show.apply("call", [10, 20]);
+
+      var res = show.bind("bind"); 
+      res(40, 50); // refers to "bind"
+
+    </script>
+  </head>
+  <body>
+    <button class="btn">Action</button>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

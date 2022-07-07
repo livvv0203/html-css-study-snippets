@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+        // 1. p1.__proto__ => refers to Person.prototype
+        // 2. Person.prototype belongs to Object function 
+        // Person.prototype.__proto__ => refers to Object.prototyoe
+        // 3. Person is an instance of Funtion: Person.__proto__ => refers to Function.prototype
+        // 4. Object.prototype.__proto__ => refers to null => there's no __proto__ in Object.prototype
+        // 5. Object.__proto__ => refers to: Function.prototype
+        // 6. Function.prototype.__proto__ => refers to: Object.prototype
+        // 7. Function.__proto__ => Function is an instance of Function => Function.prototype
+
+        function Person() {
+
+        }
+
+        var p1 = new Person();
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

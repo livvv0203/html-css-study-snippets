@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce page</title>
+    <link rel="stylesheet" href="./icofont/icofont.min.css" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .box {
+        width: 955px;
+        height: 1420px;
+        margin: 0 auto;
+        /* background: yellow; */
+        background: whitesmoke;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header Layout */
+      header {
+        height: 124px;
+        background: black;
+        display: flex;
+      }
+
+      header i.icofont-edit,
+      i.icofont-external-link,
+      i.icofont-expand,
+      i.icofont-gear-alt {
+        width: 118px;
+        height: 124px;
+        line-height: 124px;
+        text-align: center;
+        font-size: 48px;
+        color: white;
+        font-size: 60px;
+      }
+
+      header span {
+        font-size: 40px;
+        flex: 1;
+        height: 124px;
+        line-height: 124px;
+        color: white;
+      }
+
+      /* Footer Layout */
+      footer {
+        height: 128px;
+        background: white;
+        display: flex;
+      }
+
+      footer div {
+        flex: 1;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: lightgray;
+      }
+
+      footer div:hover {
+        color:orange;
+      }
+
+      /* i.icofont-money:hover {
+        color:skyblue;
+      } */
+
+      footer div i {
+        height: 66px;
+        text-align: center;
+        line-height: 66px;
+        font-size: 58px;
+      }
+
+      footer div span {
+        height: 36px;
+        text-align: center;
+        line-height: 36px;
+        font-size: 28px;
+      }
+
+      /* Section Layout */
+      section {
+        /* 占满剩余空间 */
+        flex: 1;
+      }
+
+      .main {
+        display: flex;
+        height: 278px;
+        background: orange;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .main div {
+        width: 120px;
+        height: 168px;
+        /* background: blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        color: white;
+      }
+
+      .main div i {
+        font-size: 90px;
+        text-align: center;
+      }
+
+      .main div span {
+        font-size: 32px;
+        text-align: center;
+      }
+
+      .content-list {
+        display: flex;
+        flex-wrap: wrap;
+        background: white;
+      }
+
+      .content-list div {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        height: 208px;
+        border: 1px solid gray;
+        box-sizing: border-box;
+        justify-content: center;
+      }
+
+      .content-list div i {
+        height: 77px;
+        line-height: 77px;
+        text-align: center;
+        font-size: 70px;
+        color: orange;
+      }
+
+      .content-list div span {
+        height: 61px;
+        line-height: 61px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      .pic {
+        margin-top: 25px;
+      }
+
+      .pic img {
+        width: 955px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <header>
+        <i class="icofont-edit"></i>
+        <span>Profile</span>
+        <i class="icofont-expand"></i>
+        <i class="icofont-external-link"></i>
+        <i class="icofont-gear-alt"></i>
+      </header>
+      <section>
+        <div class="main">
+          <div>
+            <i class="icofont-inbox"></i>
+            <span>Scan</span>
+          </div>
+          <div>
+            <i class="icofont-inbox"></i>
+            <span>Scan</span>
+          </div>
+          <div><i class="icofont-inbox"></i> <span>Scan</span></div>
+          <div><i class="icofont-inbox"></i> <span>Scan</span></div>
+        </div>
+
+        <div class="content-list">
+          <div>
+            <i class="icofont-id"></i>
+            <span>Credit Card</span>
+          </div>
+          <div>
+            <i class="icofont-id"></i>
+            <span>Credit Card</span>
+          </div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+          <div><i class="icofont-id"></i> <span>Credit Card</span></div>
+        </div>
+        <div class="pic">
+            <img src="./Images/banner_test.jpeg" alt="no image">
+        </div>
+      </section>
+
+      <footer>
+            <div>
+                <i class="icofont-money"></i>
+                <span>Payment</span>
+            </div>
+            <div>
+                <i class="icofont-money"></i>
+                <span>Payment</span>
+            </div>
+            <div>
+                <i class="icofont-money"></i>
+                <span>Payment</span>
+            </div>
+            <div>
+                <i class="icofont-money"></i>
+                <span>Payment</span>
+            </div>
+      </footer>
+    </div>
+  </body>
+</html>

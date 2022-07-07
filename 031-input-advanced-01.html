@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input</title>
+    <style>
+      fieldset {
+        border: 2px solid blue;
+        width: 400px;
+        height: 200px;
+      }
+
+      legend {
+        border: 1px solid red;
+        text-align: right;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>Input Practice</h1>
+    <div>How do you like the content?</div>
+    <div><input type="radio" name="a" id="1" checked="checked"/><label for="1">Very Satisfied</label></div>
+    <div><input type="radio" name="a" id="2"/><label for="2">Satisfied</label></div>
+    <div><input type="radio" name="a" id="3"/><label for="3">Not bad</label></div>
+    <div><input type="radio" name="a" id="4"/><label for="4">Bad</label></div>
+    <br>
+    <div>
+      <div>Your gender:</div>
+      <div>
+        <input type="radio" name="b" id="female" checked="checked"/>
+        <label for="female">Female</label>
+      </div>
+      <div><input type="radio" name="b" id="male"/>
+        <label for="male">Male</label></div>
+    </div>
+    <br>
+    <div>
+        <div>Hobbies</div>
+        <input type="checkbox" name="aaa" id="smoke"><label for="smoke">SMOKE</label>
+        <input type="checkbox" name="aaa" id="laugh"><label for="laugh">LAUGH</label>
+    </div>
+    <br>
+    <div>
+        <div>Upload an Image: </div>
+        <input type="file" name="" id="">
+    </div>
+    <br>
+    <div>
+        <div>Image Button</div>
+        <input type="image" src="link of an icon">
+    </div>
+    <br>
+    <div>Mute the Action</div>
+    <div>
+        <button disabled="disabled">SignIn</button>
+        <input type="radio" disabled>
+        <input type="text" disabled value="11111">
+        <input type="text" readonly value="11111">
+    </div>
+    <h1>Text Input</h1>
+    <div>
+        <textarea cols="10" rows="10" placeholder="Enter something...">aaaaaaaa</textarea>
+    </div>
+    <h1>Another one: </h1>
+    <div>
+      <fieldset>
+        <legend>Gender</legend>
+
+        <input type="radio">Male
+        <input type="radio">Female
+      </fieldset>
+    </div>
+  </body>
+</html>

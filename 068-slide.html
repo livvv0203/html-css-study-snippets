@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide</title>
+    <style>
+      #slide-bar {
+        position: relative;
+        width: 700px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 100px auto;
+      }
+
+      #control-block {
+        width: 50px;
+        height: 50px;
+        background-color: greenyellow;
+        position: absolute;
+        left: 100px;
+        top: 0px;
+      }
+      #block-left {
+        width: 100px;
+        height: 50px;
+        background-color: green;
+        position: absolute;
+        left: 0px;
+        top: 0px
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="slide-bar">
+      <div id="block-left"></div>
+      <div id="control-block"></div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            // First, get the element
+            var slideBar = document.getElementById('slide-bar');
+            var controlBlock = document.getElementById('control-block');
+            var blockLeft = document.getElementById('block-left');
+
+            // Get slider data from local storage
+            if (!window.localStorage) {
+                console.log("Does not support local storage.");
+            } else {
+                var l = localStorage.getItem("slide-distance") ? localStorage.getItem("slide-distance"): 0;
+                // Give the initial data to the element
+                controlBlock.style.left = l + 'px';
+                blockLeft.style.width = l + 'px';
+                
+            }
+
+            controlBlock.onmousedown = function(event) {
+
+                var e = event || window.event;
+                // Mouse position - control block position
+                var offSetX = e.clientX - controlBlock.offsetLeft;
+
+                document.onmousemove = function(event) {
+                    var e = event || window.event;
+                    var left = e.clientX - offSetX;
+                    if (left <= 0) {
+                        left = 0;
+                    }
+                    if (left >= 650) {
+                        left = 650;
+                    }
+            
+                    controlBlock.style.left = left + 'px';
+                    // Fill-in left blank
+                    blockLeft.style.width = left + 'px';
+
+                    // Save the postion to local storage
+                    if(!window.localStorage) {
+                        console.log("Browser does not support local storage!")
+                    } else {
+                        localStorage.setItem("slide-distance", left);
+                    }
+                }
+            }
+
+            document.onmouseup = function() {
+                document.onmousemove = null;
+            }
+
+        }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

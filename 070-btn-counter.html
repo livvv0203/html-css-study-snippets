@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btn-counter</title>
+</head>
+<body>
+    <div>
+        <button>Increment</button>
+        <p>0</p>
+    </div>
+    <script>
+        var btn = document.querySelector('button');
+        var count = document.querySelector('p');
+        btn.onclick = function (){
+            count.innerText++;
+        }
+    </script>
+</body>
+</html>

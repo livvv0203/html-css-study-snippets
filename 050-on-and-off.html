@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./java-script/007-on-and-off.js"></script>
+    <title>On AND Off</title>
+    <style>
+        html, body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 500px;
+            height: 500px;
+            background: whitesmoke;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <button id="on">OPEN</button>
+      <button id="off">CLOSE</button>
+    </div>
+
+    <script>
+        // Turn-on the click event
+        on.onclick = function() {
+            window.open('https://www.instagram.com/livvv0203/');
+        }
+
+        // Close the window
+        off.onclick = function() {
+            window.close();
+        }
+
+        // window.onload(), window.onresize(), window.onscroll
+        // window.history.back(), window.history.forward()
+    </script>
+
+
+  </body>
+</html>

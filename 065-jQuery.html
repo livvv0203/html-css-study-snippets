@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <ul>
+        <li>1</li>
+        <li class="a">2</li>
+        <li>3</li>
+        <li class="b">4</li>
+        <li>5</li>
+        <li class="a">6</li>
+        <span>I'm Span Tag.
+            <i>111</i>
+        </span>
+        <li>7</li>
+        <li id="box">8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    
+
+    <script>
+        // Selector
+        console.log('Selected: ');
+        console.log($('#box'));  // Select li with box id
+        console.log($('.a'));
+        console.log($('li'));
+        console.log($('li:nth-child(even)'));
+        console.log('----------');
+
+        // Filter Selection
+        console.log($('li').first());
+        console.log($('li').last());
+        console.log($('li').eq(3)); // Index 3
+        console.log($('span').next());
+        console.log($('span').nextAll());
+        console.log($('span').prev());
+        console.log($('span').prevAll());
+        console.log($('span').parent()); // ul
+        console.log('Select: ' + $('span').parents()); // All parents
+        console.log($('span').siblings());
+        console.log($('span').find('i'));
+
+    </script>
+
+
+</body>
+</html>

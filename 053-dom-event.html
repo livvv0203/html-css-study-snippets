@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        background: whitesmoke;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button>OPEN</button>
+      <button>CLOSE</button>
+      <p>Text Content</p>
+    </div>
+
+    <script>
+        // Get the element
+        var element = document.querySelector('p');
+        var btn = document.querySelector('button');
+
+        // Get text content from the element
+        // console.log(element.innerText);
+
+        // Give button an event 
+        btn.onclick = function() {
+            element.innerText='New Text';
+        }
+
+        // Hyper Text
+        console.log(element.innerHTML);
+
+        // Attributes
+
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
